@@ -10,6 +10,7 @@
       type="text/css"
       href="node_modules/fullpage.js/dist/fullpage.css"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/nfy5lai.css" />
   </head>
   <body>
     <ul id="menu">
@@ -25,13 +26,13 @@
       <li data-menuanchor="contact" class=""><a href="#contact">Contact</a></li>
     </ul>
     <section id="fullpage">
-      <section class="section" id="intro">
+      <section class="section" id="main">
         <div class="intro">
           <div class="intro__text">
             <img src="images/sigma-skates-logo-v-white-web.svg" width="200" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              aliquet justo massa, ac ullamcorper nisl tempus imperdiet.
+              Sigma Skates is a premium skate brand offering inline skate wheels
+              and accessories.
             </p>
           </div>
         </div>
@@ -80,6 +81,7 @@
                 consequat sapien elit, in mollis dui hendrerit ut. In dignissim
                 non tortor ac condimentum.
               </p>
+              <a href="/" class="btn">Buy on Amazon</a>
             </div>
           </div>
           <div class="product flux-2">
@@ -95,6 +97,7 @@
                 consequat sapien elit, in mollis dui hendrerit ut. In dignissim
                 non tortor ac condimentum.
               </p>
+              <a href="/" class="btn">Buy on Amazon</a>
             </div>
           </div>
         </div>
@@ -106,7 +109,9 @@
             <h2>Contact Us</h2>
             <p>
               Email us at
-              <a href="mailto:info@sigmaskates.com">info@sigmaskates.com</a>
+              <a href="mailto:info@sigmaskates.com"
+                ><strong>info@sigmaskates.com</strong></a
+              >
             </p>
           </div>
           <footer>
@@ -115,24 +120,23 @@
         </div>
       </section>
     </section>
+    <script
+      type="text/javascript"
+      src="node_modules/fullpage.js/dist/fullpage.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/fullpage.js/dist/fullpage.extensions.min.js"
+    ></script>
+    <script>
+      new fullpage("#fullpage", {
+        menu: "#menu",
+        anchors: ["intro", "about", "products", "contact"],
+        autoScrolling: true,
+        scrollHorizontally: true,
+        responsiveWidth: 1000,
+        responsiveSlides: true,
+      });
+    </script>
   </body>
-
-  <script
-    type="text/javascript"
-    src="node_modules/fullpage.js/dist/fullpage.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="node_modules/fullpage.js/dist/fullpage.extensions.min.js"
-  ></script>
-  <script>
-    new fullpage("#fullpage", {
-      menu: "#menu",
-      anchors: ["intro", "about", "products", "contact"],
-      autoScrolling: true,
-      scrollHorizontally: true,
-      responsiveWidth: 1000,
-      responsiveSlides: true,
-    });
-  </script>
 </html>
