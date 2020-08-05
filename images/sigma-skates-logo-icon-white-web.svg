@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="sigma-skates-logo-v1.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg975"
+   version="1.1"
+   viewBox="0 0 53.484406 45.459911"
+   height="1.7897602in"
+   width="2.1056852in">
+  <defs
+     id="defs969">
+    <color-profile
+       id="color-profile1583"
+       xlink:href="C:\WINDOWS\system32\spool\drivers\color\RSWOP.icm"
+       name="Agfa-:-Swop-Standard" />
+  </defs>
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-11"
+     inkscape:window-x="-11"
+     inkscape:window-height="2066"
+     inkscape:window-width="3840"
+     units="in"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="g1602"
+     inkscape:document-units="mm"
+     inkscape:cy="84.648662"
+     inkscape:cx="104.2225"
+     inkscape:zoom="1.4"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata972">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-78.257796,-125.77004)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       transform="translate(-72.764266,104.77091)"
+       id="g1058-5">
+      <g
+         id="g881-5"
+         transform="translate(0.00835218,-0.76839989)" />
+    </g>
+    <g
+       style="fill:#000000"
+       transform="translate(-1.4522779,1.9398015)"
+       id="g1602">
+      <path
+         id="path877-7"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.85444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="m 102.44177,123.83024 c -0.0112,0 -0.0221,10e-4 -0.0333,10e-4 -12.498416,0.0182 -22.698396,10.22921 -22.698396,22.73168 0,12.51364 10.21801,22.72723 22.731686,22.72723 12.51362,10e-6 22.73167,-10.21359 22.73167,-22.72723 0,-6.16742 -2.48525,-11.77407 -6.50094,-15.87789 h 10.23686 l 4.28513,-6.85379 h -30.70944 c -0.0145,-2e-5 -0.0288,-10e-4 -0.0433,-10e-4 z m 0,6.8549 c 8.80923,-1e-5 15.87789,7.06865 15.87789,15.87789 0,8.80923 -7.06866,15.87234 -15.87789,15.87233 -8.809246,0 -15.877886,-7.0631 -15.877886,-15.87233 0,-8.80924 7.06864,-15.87789 15.877886,-15.87789 z" />
+    </g>
+  </g>
+</svg>

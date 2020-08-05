@@ -1,0 +1,26 @@
+{
+  "name": "sigmaskates.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fullpage.js": "^3.0.9",
+    "node-sass": "^4.14.1",
+    "smooth-scrollbar": "^8.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigmaskates/sigmaskates.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sigmaskates/sigmaskates.github.io/issues"
+  },
+  "homepage": "https://github.com/sigmaskates/sigmaskates.github.io#readme"
+}
