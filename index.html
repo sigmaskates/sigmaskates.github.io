@@ -10,9 +10,14 @@
       type="text/css"
       href="node_modules/fullpage.js/dist/fullpage.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/animate.css/animate.min.css"
+    />
     <link rel="stylesheet" href="https://use.typekit.net/nfy5lai.css" />
   </head>
-  <body>
+  <body data-scrollbar>
     <ul id="menu">
       <li data-menuanchor="intro" class="active">
         <a href="#intro"
@@ -27,19 +32,20 @@
     </ul>
     <section id="fullpage">
       <section class="section" id="main">
-        <div class="intro">
+        <div class="intro animate__animated">
           <div class="intro__text">
             <img src="images/sigma-skates-logo-v-white-web.svg" width="200" />
             <p>
               Sigma Skates is a premium skate brand offering inline skate wheels
               and accessories.
             </p>
+            <a class="arrowDown"><span></span></a>
           </div>
         </div>
       </section>
 
       <section class="section" id="about-us">
-        <div class="about">
+        <div class="about animate__animated delay-1">
           <figure class="about__image"></figure>
           <div class="about__text">
             <h2>About Us</h2>
@@ -62,8 +68,8 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="products">
+      <section class="section" id="wheels">
+        <div class="products animate__animated delay-1">
           <h2 class="bg-text">FLUX SERIES</h2>
           <div class="products__header">
             <h2>Wheels</h2>
@@ -81,7 +87,7 @@
                 consequat sapien elit, in mollis dui hendrerit ut. In dignissim
                 non tortor ac condimentum.
               </p>
-              <a href="/" class="btn">Buy on Amazon</a>
+              <!-- <a href="/" class="btn">Buy on Amazon</a> -->
             </div>
           </div>
           <div class="product flux-2">
@@ -97,14 +103,14 @@
                 consequat sapien elit, in mollis dui hendrerit ut. In dignissim
                 non tortor ac condimentum.
               </p>
-              <a href="/" class="btn">Buy on Amazon</a>
+              <!-- <a href="/" class="btn">Buy on Amazon</a> -->
             </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="contact-us">
-        <div class="contact">
+        <div class="contact animate__animated delay-1">
           <div class="contact__info">
             <h2>Contact Us</h2>
             <p>
@@ -120,22 +126,40 @@
         </div>
       </section>
     </section>
-    <script
-      type="text/javascript"
-      src="node_modules/fullpage.js/dist/fullpage.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="node_modules/fullpage.js/dist/fullpage.extensions.min.js"
-    ></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="node_modules/fullpage.js/dist/fullpage.extensions.min.js"></script>
     <script>
-      new fullpage("#fullpage", {
-        menu: "#menu",
-        anchors: ["intro", "about", "products", "contact"],
-        autoScrolling: true,
-        scrollHorizontally: true,
-        responsiveWidth: 1000,
-        responsiveSlides: true,
+      // Fullpage
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          menu: "#menu",
+          anchors: ["intro", "about", "products", "contact"],
+          autoScrolling: true,
+          scrollHorizontally: true,
+          responsiveWidth: 1000,
+          // responsiveSlides: true,
+          afterLoad: function (origin) {
+            $(".intro").addClass("animate__fadeIn");
+          },
+          onLeave: function (origin, index) {
+            if ($(window).width() > 1000) {
+              if (origin.index === 0) {
+                $(".about").addClass("animate__fadeIn");
+              }
+              if (origin.index === 1) {
+                $(".products").addClass("animate__fadeIn");
+              }
+              if (origin.index === 2) {
+                $(".contact").addClass("animate__fadeIn");
+              }
+            }
+          },
+        });
+        // Intro section down arrow
+        $(".arrowDown").click(function () {
+          $.fn.fullpage.moveSectionDown();
+        });
       });
     </script>
   </body>

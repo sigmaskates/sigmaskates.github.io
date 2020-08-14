@@ -4,8 +4,7 @@ body {
   margin: 0 auto;
   font-family: europa, sans-serif;
   font-weight: 300;
-  font-style: normal;
-  line-height: 1.2; }
+  font-style: normal; }
 
 footer {
   position: absolute;
@@ -87,6 +86,9 @@ section {
 ul {
   list-style-type: none; }
 
+.delay-1 {
+  animation-delay: 0.5s; }
+
 #menu {
   position: fixed;
   top: 2rem;
@@ -96,19 +98,106 @@ ul {
   width: 100%;
   padding: 0;
   margin: 0; }
+  @media (max-width: 1000px) {
+    #menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center; } }
   #menu li {
     padding: 0.5rem 0; }
+    @media (max-width: 1000px) {
+      #menu li {
+        padding: 1rem;
+        line-height: 0.5rem; }
+        #menu li img {
+          width: 25px; } }
     #menu li.active a {
       color: #dac8de; }
       #menu li.active a:first-child {
         opacity: 1; }
     #menu li a {
       text-transform: uppercase;
-      font-weight: 600; }
+      font-weight: 600;
+      font-size: 1em; }
+      @media (max-width: 1000px) {
+        #menu li a {
+          font-size: 0.8em; } }
       #menu li a:first-child {
         opacity: 0.75; }
       #menu li a:hover {
         opacity: 1; }
+
+@-webkit-keyframes arrowAnim {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    box-shadow: 0 0 0 60px rgba(231, 202, 152, 0.1);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes arrowAnim {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    box-shadow: 0 0 0 60px rgba(231, 202, 152, 0.1);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+.arrowDown span {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #e7ca98;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s linear;
+  cursor: pointer; }
+  .arrowDown span:hover {
+    border-color: #f5ead6; }
+    .arrowDown span:hover::after {
+      border-color: #f5ead6; }
+  .arrowDown span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #e7ca98;
+    border-bottom: 1px solid #e7ca98;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+    transition: border-color 0.2s linear; }
+  .arrowDown span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(231, 202, 152, 0.1);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: arrowAnim 3s infinite;
+    animation: arrowAnim 3s infinite;
+    box-sizing: border-box; }
 
 #main {
   background: url("../images/galaxy-bg.jpg") 50% 100%;
@@ -127,7 +216,8 @@ ul {
     .intro__text p {
       font-size: 1.5em;
       font-weight: 400;
-      font-style: italic; }
+      font-style: italic;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
       @media (min-width: 1625px) {
         .intro__text p {
           font-size: 1.2vw; } }
@@ -136,7 +226,11 @@ ul {
         width: 50%; } }
     @media (max-width: 1000px) {
       .intro__text {
-        width: 80%; } }
+        width: 80%; }
+        .intro__text img {
+          width: 150px; }
+        .intro__text p {
+          font-size: 1.2em; } }
 
 .about {
   display: grid;
@@ -171,7 +265,7 @@ ul {
 
 .products {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 90%;
   grid-row-gap: 30px;
   grid-column-gap: 30px;
@@ -185,6 +279,21 @@ ul {
     font-size: 7em;
     color: #c5a8cb;
     opacity: 25%; }
+    @media (min-width: 1600px) and (max-width: 1920px) {
+      .products .bg-text {
+        top: 18%; } }
+    @media (min-width: 1500px) and (max-width: 1600px) {
+      .products .bg-text {
+        top: 22%;
+        font-size: 5em; } }
+    @media (min-width: 1200px) and (max-width: 1500px) {
+      .products .bg-text {
+        top: 26%;
+        font-size: 4em; } }
+    @media (max-width: 1200px) {
+      .products .bg-text {
+        top: 2%;
+        font-size: 2em; } }
   @media (max-width: 1920px) {
     .products {
       grid-template-rows: auto;
@@ -193,15 +302,14 @@ ul {
       grid-column-gap: 50px; } }
   @media (max-width: 1600px) {
     .products {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 10% 40% 40%;
-      grid-template-areas: "header header" "flux-1 ." ". flux-2";
-      padding: 4rem; } }
+      padding: 4rem;
+      grid-row-gap: 100px; } }
   @media (max-width: 1200px) {
     .products {
       grid-template-columns: 100%;
       grid-template-rows: auto;
       grid-template-areas: "header" "flux-1" "flux-2";
+      grid-row-gap: 0;
       padding: 0; } }
   .products .product {
     position: relative; }
@@ -224,7 +332,13 @@ ul {
       font-size: 1.2em; }
     .products .product img {
       width: 60%; }
-      @media (max-width: 728px) {
+      @media (max-width: 1200px) {
+        .products .product img {
+          width: 50%;
+          margin-bottom: 1rem; }
+          .products .product img:first-child {
+            margin-top: 50px; } }
+      @media (max-width: 600px) {
         .products .product img {
           width: 100%; } }
     @media (max-width: 1920px) {
@@ -249,13 +363,13 @@ ul {
         left: 64%;
         top: 8%; }
       .products .product__desc {
-        font-size: 1em;
-        left: 64%;
-        top: 33%; } }
+        font-size: 0.9em;
+        left: 64%; } }
     @media (max-width: 1200px) {
       .products .product {
         margin: 30px;
-        padding: 0; }
+        padding: 0;
+        text-align: center; }
         .products .product__title {
           position: relative;
           left: 0;
@@ -266,13 +380,13 @@ ul {
           left: 0;
           top: 0;
           font-size: 1em; } }
+    @media (max-width: 600px) {
+      .products .product {
+        margin: 10px 30px; } }
   .products .flux-1 {
     grid-area: flux-1; }
   .products .flux-2 {
     grid-area: flux-2; }
-    @media (min-width: 1000px) and (max-width: 1600px) {
-      .products .flux-2 {
-        bottom: 100px; } }
   .products__header {
     grid-area: header;
     text-align: center; }
@@ -289,3 +403,8 @@ ul {
   align-items: center;
   justify-items: center;
   text-align: center; }
+
+#my-scrollbar {
+  width: 500px;
+  height: 500px;
+  overflow: auto; }
